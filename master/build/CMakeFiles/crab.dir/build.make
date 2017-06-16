@@ -82,6 +82,7 @@ crab_EXTERNAL_OBJECTS =
 crab: CMakeFiles/crab.dir/src/main.c.o
 crab: CMakeFiles/crab.dir/build.make
 crab: libserial.so
+crab: libkeyboard.so
 crab: CMakeFiles/crab.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable crab"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/crab.dir/link.txt --verbose=$(VERBOSE)

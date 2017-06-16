@@ -4,7 +4,8 @@
  * 功能  ： 螃蟹车控制主程序
  * 作者  ： JohnnyWang
  * log   :   
- * =======2017.06.14(星期三)=======创建文件,
+ * =======2017.06.14.09:50(星期三)=======创建文件,成功配置串口，并发出数据
+ * =======2017.06.15.09:18(星期四)=======添加键盘遥控
  */
 #include "include.h"
 void mysleep(int isec,int iusec)
@@ -36,7 +37,12 @@ int main(void)
     //printf("nread=%d,%s\n",nread,buff); 
     nwrite=write(fd,buff,8);//写串口 
     printf("nwrite=%d,%s\n",nwrite,buff);
-    close(fd); 
+    close(fd);
+
+    while(1)
+    {  
+        printf(":%d",scanKeyboard());  
+    }  
     return; 
 } 
 

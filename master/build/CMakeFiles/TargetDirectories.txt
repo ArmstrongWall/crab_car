@@ -1,2 +1,3 @@
 /home/wang/crab/master/build/CMakeFiles/crab.dir
+/home/wang/crab/master/build/CMakeFiles/keyboard.dir
 /home/wang/crab/master/build/CMakeFiles/serial.dir

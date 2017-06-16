@@ -177,6 +177,9 @@ crab_BINARY_DIR:STATIC=/home/wang/crab/master/build
 crab_SOURCE_DIR:STATIC=/home/wang/crab/master
 
 //Dependencies for target
+keyboard_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
 serial_LIB_DEPENDS:STATIC=
 
 

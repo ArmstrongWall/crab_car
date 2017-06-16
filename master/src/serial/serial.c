@@ -16,7 +16,17 @@
 #include <unistd.h> 
 #include <termios.h> 
 #include <stdlib.h> 
- 
+
+/*
+ *函数功能：打开串口的port
+ *参数说明：
+            fd：串口的设备文件描述符参数
+            comport:端口号 1-->USB0   2-->USB1   3-->USB2
+  返回值 ：
+            成功： 文件描述符
+            失败：-1
+ * */
+
 int open_port(int fd,int comport) 
 { 
 	char *dev[]={"/dev/ttyUSB0","/dev/ttyUSB1","/dev/ttyS2"}; 
@@ -63,6 +73,19 @@ int open_port(int fd,int comport)
      return fd; 
 }
 
+/*
+ *函数功能：设置串口的参数配置
+ *参数说明：
+            fd      ：串口的设备文件描述符
+            nSpeed  ：波特率
+            nBits   ：停止位
+            nEvent  ：校验位
+            nStop   ：停止位
+  返回值 ：
+            成功： 0
+            失败：-1
+
+ * */
 int set_opt(int fd,int nSpeed, int nBits, char nEvent, int nStop) 
 { 
      struct termios newtio,oldtio; 

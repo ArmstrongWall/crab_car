@@ -57,6 +57,7 @@ CMAKE_BINARY_DIR = /home/wang/crab/master/build
 
 # All Build rule for target.
 CMakeFiles/crab.dir/all: CMakeFiles/serial.dir/all
+CMakeFiles/crab.dir/all: CMakeFiles/keyboard.dir/all
 	$(MAKE) -f CMakeFiles/crab.dir/build.make CMakeFiles/crab.dir/depend
 	$(MAKE) -f CMakeFiles/crab.dir/build.make CMakeFiles/crab.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/wang/crab/master/build/CMakeFiles  1
@@ -69,7 +70,7 @@ all: CMakeFiles/crab.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/crab.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/crab/master/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/crab/master/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/crab.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/crab/master/build/CMakeFiles 0
 .PHONY : CMakeFiles/crab.dir/rule
@@ -88,13 +89,48 @@ clean: CMakeFiles/crab.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/keyboard.dir
+
+# All Build rule for target.
+CMakeFiles/keyboard.dir/all:
+	$(MAKE) -f CMakeFiles/keyboard.dir/build.make CMakeFiles/keyboard.dir/depend
+	$(MAKE) -f CMakeFiles/keyboard.dir/build.make CMakeFiles/keyboard.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/wang/crab/master/build/CMakeFiles  2
+	@echo "Built target keyboard"
+.PHONY : CMakeFiles/keyboard.dir/all
+
+# Include target in all.
+all: CMakeFiles/keyboard.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/keyboard.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/crab/master/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/keyboard.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/crab/master/build/CMakeFiles 0
+.PHONY : CMakeFiles/keyboard.dir/rule
+
+# Convenience name for target.
+keyboard: CMakeFiles/keyboard.dir/rule
+.PHONY : keyboard
+
+# clean rule for target.
+CMakeFiles/keyboard.dir/clean:
+	$(MAKE) -f CMakeFiles/keyboard.dir/build.make CMakeFiles/keyboard.dir/clean
+.PHONY : CMakeFiles/keyboard.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/keyboard.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/serial.dir
 
 # All Build rule for target.
 CMakeFiles/serial.dir/all:
 	$(MAKE) -f CMakeFiles/serial.dir/build.make CMakeFiles/serial.dir/depend
 	$(MAKE) -f CMakeFiles/serial.dir/build.make CMakeFiles/serial.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/wang/crab/master/build/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/wang/crab/master/build/CMakeFiles  3
 	@echo "Built target serial"
 .PHONY : CMakeFiles/serial.dir/all
 

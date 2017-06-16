@@ -11,6 +11,7 @@ SET(CMAKE_C_COMPILER_ID "GNU")
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/wang/crab/master/build/CMakeFiles/serial.dir/DependInfo.cmake"
+  "/home/wang/crab/master/build/CMakeFiles/keyboard.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

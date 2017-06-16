@@ -1,1 +1,1 @@
-/usr/bin/cc      CMakeFiles/crab.dir/src/main.c.o  -o crab -rdynamic libserial.so -Wl,-rpath,/home/wang/crab/master/build 
+/usr/bin/cc      CMakeFiles/crab.dir/src/main.c.o  -o crab -rdynamic libserial.so libkeyboard.so -Wl,-rpath,/home/wang/crab/master/build 

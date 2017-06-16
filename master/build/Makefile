@@ -112,6 +112,19 @@ crab/fast:
 .PHONY : crab/fast
 
 #=============================================================================
+# Target rules for targets named keyboard
+
+# Build rule for target.
+keyboard: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 keyboard
+.PHONY : keyboard
+
+# fast build rule for target.
+keyboard/fast:
+	$(MAKE) -f CMakeFiles/keyboard.dir/build.make CMakeFiles/keyboard.dir/build
+.PHONY : keyboard/fast
+
+#=============================================================================
 # Target rules for targets named serial
 
 # Build rule for target.
@@ -148,6 +161,30 @@ src/main.c.s:
 	$(MAKE) -f CMakeFiles/crab.dir/build.make CMakeFiles/crab.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/sensor/keyboard/keyboard.o: src/sensor/keyboard/keyboard.c.o
+.PHONY : src/sensor/keyboard/keyboard.o
+
+# target to build an object file
+src/sensor/keyboard/keyboard.c.o:
+	$(MAKE) -f CMakeFiles/keyboard.dir/build.make CMakeFiles/keyboard.dir/src/sensor/keyboard/keyboard.c.o
+.PHONY : src/sensor/keyboard/keyboard.c.o
+
+src/sensor/keyboard/keyboard.i: src/sensor/keyboard/keyboard.c.i
+.PHONY : src/sensor/keyboard/keyboard.i
+
+# target to preprocess a source file
+src/sensor/keyboard/keyboard.c.i:
+	$(MAKE) -f CMakeFiles/keyboard.dir/build.make CMakeFiles/keyboard.dir/src/sensor/keyboard/keyboard.c.i
+.PHONY : src/sensor/keyboard/keyboard.c.i
+
+src/sensor/keyboard/keyboard.s: src/sensor/keyboard/keyboard.c.s
+.PHONY : src/sensor/keyboard/keyboard.s
+
+# target to generate assembly for a file
+src/sensor/keyboard/keyboard.c.s:
+	$(MAKE) -f CMakeFiles/keyboard.dir/build.make CMakeFiles/keyboard.dir/src/sensor/keyboard/keyboard.c.s
+.PHONY : src/sensor/keyboard/keyboard.c.s
+
 src/serial/serial.o: src/serial/serial.c.o
 .PHONY : src/serial/serial.o
 
@@ -180,11 +217,15 @@ help:
 	@echo "... depend"
 	@echo "... crab"
 	@echo "... edit_cache"
+	@echo "... keyboard"
 	@echo "... rebuild_cache"
 	@echo "... serial"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/sensor/keyboard/keyboard.o"
+	@echo "... src/sensor/keyboard/keyboard.i"
+	@echo "... src/sensor/keyboard/keyboard.s"
 	@echo "... src/serial/serial.o"
 	@echo "... src/serial/serial.i"
 	@echo "... src/serial/serial.s"
