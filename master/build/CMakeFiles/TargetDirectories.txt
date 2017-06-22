@@ -1,3 +1,9 @@
-/home/wang/crab/master/build/CMakeFiles/crab.dir
-/home/wang/crab/master/build/CMakeFiles/keyboard.dir
-/home/wang/crab/master/build/CMakeFiles/serial.dir
+/home/wzq/crab_car/master/build/CMakeFiles/edit_cache.dir
+/home/wzq/crab_car/master/build/CMakeFiles/rebuild_cache.dir
+/home/wzq/crab_car/master/build/CMakeFiles/cv.dir
+/home/wzq/crab_car/master/build/CMakeFiles/keyboard.dir
+/home/wzq/crab_car/master/build/CMakeFiles/serial.dir
+/home/wzq/crab_car/master/build/CMakeFiles/crab.dir
+/home/wzq/crab_car/master/build/CMakeFiles/dealy.dir
+/home/wzq/crab_car/master/build/CMakeFiles/thread.dir
+/home/wzq/crab_car/master/build/CMakeFiles/control.dir

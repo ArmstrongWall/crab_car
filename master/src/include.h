@@ -11,12 +11,18 @@
 #define INCLUDE_H_
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 #include <sys/time.h>
+#include <pthread.h>
 
-#include "serial/serial.h"
 #include "control/control.h"
 #include "sensor/keyboard/keyboard.h"
+#include "sys/serial/serial.h"
+#include "sys/thread/thread.h"
+#include "sys/dealy/dealy.h"
+//#include "sensor/cv/cv.h"
 
+extern int serial_fd;
 
 #endif

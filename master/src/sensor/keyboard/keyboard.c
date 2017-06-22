@@ -28,9 +28,12 @@ int scanKeyboard()
     new_settings.c_cc[VMIN] = 1;  
     tcsetattr(0,TCSANOW,&new_settings);  
       
-    in = getchar();  
+    in = getchar(); 
+
+    printf("you press key num is %d",in);
       
 //这个方法就可以，返回值是该键的ASCII码值，不需要回车的，  
     tcsetattr(0,TCSANOW,&stored_settings);  
+    
     return in;  
 }  

@@ -11,6 +11,9 @@
 #define CONTROL_H_
 
 
+int move_forward(int fd);
 
+int move_stop(int fd);
+int move_back(int fd);
 
 #endif

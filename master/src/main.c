@@ -4,46 +4,29 @@
  * 功能  ： 螃蟹车控制主程序
  * 作者  ： JohnnyWang
  * log   :   
- * =======2017.06.14.09:50(星期三)=======创建文件,成功配置串口，并发出数据
- * =======2017.06.15.09:18(星期四)=======添加键盘遥控
+ * =======2017.06.14.09:50(星期三)======= 创建文件,成功配置串口，并发出数据
+ * =======2017.06.15.09:18(星期四)======= 添加键盘遥控
+ * =======2017.06.20.15:19(星期二)======= 添加遥控采集图像
  */
 #include "include.h"
-void mysleep(int isec,int iusec)
-{
-    struct timeval timer;
-    timer.tv_sec  = isec;
-    timer.tv_usec = iusec;
-    select(0,NULL,NULL,NULL,&timer);
-}
+int serial_fd;
 
 int main(void)  
-{ 
-    int fd; 
-    int nread,nwrite,i; 
-    char buff[]="go20;ss"; 
- 
-    if((fd=open_port(fd,1))<0){//打开串口 
-        perror("open_port error"); 
-        return; 
-    } 
-    if((i=set_opt(fd,9600,8,'N',1))<0){//设置串口 
-        perror("set_opt error"); 
-        return; 
-    } 
-    printf("fd=%d\n",fd); 
-    fd=3;
-    mysleep(3,0);
-    //nread=read(fd,buff,8);//读串口 
-    //printf("nread=%d,%s\n",nread,buff); 
-    nwrite=write(fd,buff,8);//写串口 
-    printf("nwrite=%d,%s\n",nwrite,buff);
-    close(fd);
+{
+    serial_fd = serial_init(9600);
 
-    while(1)
-    {  
-        printf(":%d",scanKeyboard());  
-    }  
-    return; 
+    if( serial_fd == -1)
+    {
+        printf("serial init failed\r\n");
+        exit(-1);
+    }
+    
+    mysleep(3,0);//串口初始化完成后需要等待一段时间
+
+    thread_init();
+
+
+    return 0; 
 } 
 
 

@@ -4,8 +4,29 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CONTROL_H_	control/control.h	11;"	d
+CV_H	sensor/cv/cv.h	2;"	d
+DEALY_H_	sys/dealy/dealy.h	11;"	d
 INCLUDE_H_	include.h	11;"	d
+KEYBOARD_H_	sensor/keyboard/keyboard.h	12;"	d
+SCAN_OK	sys/thread/thread.c	/^pthread_cond_t SCAN_OK = PTHREAD_COND_INITIALIZER;\/\/初始化一个线程条件变量$/;"	v
 SERIAL_H_	serial/serial.h	11;"	d
+SERIAL_H_	sys/serial/serial.h	11;"	d
+THREAD_H	sys/thread/thread.h	11;"	d
+ctrlcar	sys/thread/thread.c	/^void *ctrlcar()$/;"	f
+get_and_save_video	sensor/cv/cv.cpp	/^void *get_and_save_video()$/;"	f
+getkey	sys/thread/thread.c	/^void *getkey()$/;"	f
+key_num	sys/thread/thread.c	/^int key_num = 0;$/;"	v
 main	main.c	/^int main(void)  $/;"	f
+move_forward	control/control.c	/^int move_forward()$/;"	f
+mux	sys/thread/thread.c	/^pthread_mutex_t mux;\/\/线程互斥锁$/;"	v
+mysleep	sys/dealy/dealy.c	/^void mysleep(int isec,int iusec)$/;"	f
 open_port	serial/serial.c	/^int open_port(int fd,int comport) $/;"	f
+open_port	sys/serial/serial.c	/^int open_port(int fd,int comport) $/;"	f
+scanKeyboard	sensor/keyboard/keyboard.c	/^int scanKeyboard()  $/;"	f
+serial_init	serial/serial.c	/^int serial_init()$/;"	f
+serial_init	sys/serial/serial.c	/^int serial_init(int baurdrate)$/;"	f
 set_opt	serial/serial.c	/^int set_opt(int fd,int nSpeed, int nBits, char nEvent, int nStop) $/;"	f
+set_opt	sys/serial/serial.c	/^int set_opt(int fd,int nSpeed, int nBits, char nEvent, int nStop) $/;"	f
+thread	sys/thread/thread.c	/^pthread_t thread[3];\/\/三个线程号$/;"	v
+thread_init	sys/thread/thread.c	/^void thread_init()$/;"	f
