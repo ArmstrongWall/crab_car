@@ -1,1 +1,0 @@
-/usr/bin/cc  -fPIC   -shared -Wl,-soname,libkeyboard.so -o libkeyboard.so CMakeFiles/keyboard.dir/src/sensor/keyboard/keyboard.c.o 

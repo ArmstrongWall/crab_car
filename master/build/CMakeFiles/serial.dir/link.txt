@@ -1,1 +1,0 @@
-/usr/bin/cc  -fPIC   -shared -Wl,-soname,libserial.so -o libserial.so CMakeFiles/serial.dir/src/sys/serial/serial.c.o 
