@@ -29,12 +29,12 @@
 
 int open_port(int fd,int comport) 
 { 
-	char *dev[]={"/dev/ttyACM0","/dev/ttyUSB1","/dev/ttyUSB2"}; 
+	char *dev[]={"/dev/ttyUSB0","/dev/ttyUSB1","/dev/ttyUSB2"}; 
 	long  vdisable; 
 
 	if (comport==1)//串口1 
 	{
-		fd = open( "/dev/ttyACM0", O_RDWR|O_NOCTTY|O_NDELAY); 
+		fd = open( "/dev/ttyUSB0", O_RDWR|O_NOCTTY|O_NDELAY); 
 		if (-1 == fd)
 		{ 
 			perror("Can't Open Serial Port"); 

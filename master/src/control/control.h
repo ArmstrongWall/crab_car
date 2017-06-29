@@ -15,5 +15,6 @@ int move_forward(int fd);
 
 int move_stop(int fd);
 int move_back(int fd);
-
+int move_left(int fd);
+int move_right(int fd);
 #endif

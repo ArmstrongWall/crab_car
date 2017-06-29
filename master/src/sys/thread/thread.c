@@ -39,17 +39,25 @@ void *ctrlcar()
         printf("I am ctrlcar\r\n");
         pthread_mutex_lock(&mux);
         pthread_cond_wait(&SCAN_OK,&mux);//等待被通知，这个函数会自动unlock互斥量,阻塞函数
-        if(key_num == 105)
+        if(key_num == 119)
         {
             move_forward(serial_fd);
         }
-        if(key_num == 107)
+        if(key_num == 113)
         {
             move_stop(serial_fd);
         }
-        if(key_num == 109)
+        if(key_num == 115)
         {
             move_back(serial_fd);
+        }
+		if(key_num == 97)
+        {
+            move_left(serial_fd);
+        }
+		if(key_num == 100)
+        {
+            move_right(serial_fd);
         }
         pthread_mutex_unlock(&mux);
     }

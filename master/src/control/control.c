@@ -11,7 +11,7 @@
 int move_forward(int fd)
 {
     
-    char buff[]="go20;aa"; 
+    char buff[]="go50;aa"; 
     //nread=read(fd,buff,8);//读串口 
     write(fd,buff,sizeof(buff));//读串口 
     //printf("nread=%d,%s\n",nread,buff); 
@@ -46,3 +46,44 @@ int move_back(int fd)
 
     printf("move_forward\r\n");
 }
+
+int move_left(int fd)
+{
+    
+    char buff[]="ll"; 
+    //nread=read(fd,buff,8);//读串口 
+    write(fd,buff,sizeof(buff));//读串口 
+    //printf("nread=%d,%s\n",nread,buff); 
+    //printf("nwrite=%d,%s\n",nwrite,buff);
+    //close(fd);
+
+    printf("move_forward\r\n");
+}
+
+
+int move_right(int fd)
+{
+    
+    char buff[]="rr"; 
+    //nread=read(fd,buff,8);//读串口 
+    write(fd,buff,sizeof(buff));//读串口 
+    //printf("nread=%d,%s\n",nread,buff); 
+    //printf("nwrite=%d,%s\n",nwrite,buff);
+    //close(fd);
+
+    printf("move_forward\r\n");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
