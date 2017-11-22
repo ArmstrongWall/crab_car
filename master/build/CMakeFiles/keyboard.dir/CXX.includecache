@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wzq/crab_car/master/src/sensor/keyboard/keyboard.cc
+stdio.h
+-
+stdlib.h
+-
+termio.h
+-
+

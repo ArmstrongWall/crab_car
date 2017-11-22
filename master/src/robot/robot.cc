@@ -7,7 +7,15 @@
  * =======2017.06.15.10:22(星期四)======= 创建文件
  *
  */
+#include "robot.h"
 
+void three_omni_wheel_robot::motion_model() const 
+{ 
+    
+}
+
+
+/*
 int move_forward(int fd)
 {
     
@@ -72,7 +80,7 @@ int move_right(int fd)
     //close(fd);
 
     printf("move_forward\r\n");
-}
+}*/
 
 
 

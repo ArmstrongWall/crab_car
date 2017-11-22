@@ -9,7 +9,7 @@
  =======2017.06.22.11:19(星期四)======= 添加图像采集 
  *
  */
-
+#if 0
 #include <stdio.h>
 #include <iostream>
 
@@ -77,3 +77,4 @@ int  get_and_save_video()
   return 0;
 
 }
+#endif

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wzq/crab_car/master/src/sys/serial/serial.cc
+stdio.h
+-
+string.h
+-
+sys/types.h
+-
+errno.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+unistd.h
+-
+termios.h
+-
+stdlib.h
+-
+

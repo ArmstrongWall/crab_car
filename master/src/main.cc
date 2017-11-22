@@ -13,7 +13,10 @@ int serial_fd;
 
 int main(void)  
 {
-    serial_fd = serial_init(9600);
+    
+     
+                    
+    serial_fd = serial_init(115200);
 
     if( serial_fd == -1)
     {

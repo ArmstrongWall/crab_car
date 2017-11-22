@@ -16,15 +16,12 @@
 #include <sys/time.h>
 #include <pthread.h>
 
-#include "robot/robot.h"
+#include "control/control.h"
 #include "sensor/keyboard/keyboard.h"
 #include "sys/serial/serial.h"
 #include "sys/thread/thread.h"
 #include "sys/dealy/dealy.h"
 //#include "sensor/cv/cv.h"
-
-#include <Eigen/Core>
-#include <Eigen/Geometry>
 
 extern int serial_fd;
 

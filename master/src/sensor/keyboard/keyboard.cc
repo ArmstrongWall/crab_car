@@ -7,7 +7,8 @@
  * =======2017.06.15.10:22(星期四)======= 创建文
 
 */
-
+#include <stdio.h>
+#include <stdlib.h>
 #include <termio.h>  
 /*函数功能：扫描键盘按下的键值
  *参数说明：
