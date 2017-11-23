@@ -1,15 +1,15 @@
 /*
  * Copyright © 2017 Uisee Co., Ltd.
- * 文件名： dealy.c
- * 功能  ： 延时函数
- * 作者  ： JohnnyWang
+ * File name： dealy.c
+ * Function  ： 延时函数
+ * Author  ： JohnnyWang
  * log   :   
  * =======2017.06.20.16:06(星期二)======= 创建文
 
 */
 #include "../../include.h"
 /*
- *函数功能：精准延时
+ *函数Function：精准延时
  *参数说明：
             isec  ： 秒
             iusec ： 微秒

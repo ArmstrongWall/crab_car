@@ -1,8 +1,8 @@
 /*
  * Copyright © 2017 Uisee Co., Ltd.
- * 文件名： thread.h
- * 功能  ： 线程操作头文件
- * 作者  ： JohnnyWang
+ * File name： thread.h
+ * Function  ： 线程操作头文件
+ * Author  ： JohnnyWang
  * log   :   
  * =======2017.06.15.10:19(星期四)=======创建文件
  *

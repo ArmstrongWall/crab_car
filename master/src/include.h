@@ -1,8 +1,8 @@
 /*
  * Copyright © 2017 Uisee Co., Ltd.
- * 文件名： include.h
- * 功能  ： 该头文件包含了工程中所有的头文件
- * 作者  ： JohnnyWang
+ * File name： include.h
+ * Function  ： 该头文件包含了工程中所有的头文件
+ * Author  ： JohnnyWang
  * log   :   
  * =======2017.06.14(星期三)=======创建文件
  *
@@ -11,6 +11,7 @@
 #define INCLUDE_H_
 
 #include <stdio.h>
+#include <iostream>
 #include <stdlib.h>
 #include <time.h>
 #include <sys/time.h>

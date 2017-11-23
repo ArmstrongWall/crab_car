@@ -13,5 +13,26 @@ Environment Profile=
 Extra Arguments=
 Install Directory=
 
+[Launch]
+Launch Configurations=Launch Configuration 1
+
+[Launch][Launch Configuration 1]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=New Compiled Binary Launcher
+Type=Native Application
+
+[Launch][Launch Configuration 1][Data]
+Arguments=
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=
+Executable=file:///home/wzq/crab_car/master/build/crab
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=master,crab
+Use External Terminal=false
+Working Directory=
+isExecutable=true
+
 [Project]
 VersionControlSupport=kdevgit

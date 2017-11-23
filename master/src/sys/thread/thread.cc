@@ -1,8 +1,8 @@
 /*
  * Copyright © 2017 Uisee Co., Ltd.
- * 文件名： thread.c
- * 功能  ： 开辟线程的函数
- * 作者  ： JohnnyWang
+ * File name： thread.c
+ * Function  ： 开辟线程的函数
+ * Author  ： JohnnyWang
  * log   :   
  * =======2017.06.20.16:06(星期二)======= 创建文
 

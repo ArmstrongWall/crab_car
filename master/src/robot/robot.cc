@@ -1,86 +1,44 @@
 /*
  * Copyright © 2017 Uisee Co., Ltd.
- * 文件名： control.c
- * 功能  ： 实现底盘速度的解析
- * 作者  ： JohnnyWang
+ * File name： robot.cc
+ * Function ： robot class
+ * Author   ： JohnnyWang
  * log   :   
- * =======2017.06.15.10:22(星期四)======= 创建文件
+ * 
  *
  */
 #include "robot.h"
 
-void three_omni_wheel_robot::motion_model() const 
+
+Eigen::Vector3d three_omni_wheel_robot::wheel_velocity_decode()
 { 
-    
+    dewheel_velocity  = solve_convert * robot_velocity;
+    return dewheel_velocity;
 }
 
 
-/*
-int move_forward(int fd)
+
+int three_omni_wheel_robot::robot_move()
 {
+    Eigen::Vector3i dwv= dewheel_velocity.cast<int>();
     
-    char buff[]="go50;aa"; 
+    for(int i = 0; i < 3 ; i++)
+    {
+        dwv(i) = dwv(i) + 32767;
+        instruction_message[i*2+1] = (dwv(i) & 0x0000ff00) >> 8;
+        instruction_message[i*2+2] = (dwv(i) & 0x000000ff);
+    }
     //nread=read(fd,buff,8);//读串口 
-    write(fd,buff,sizeof(buff));//读串口 
+    write(serial_fd,instruction_message,sizeof(instruction_message));//读串口 
     //printf("nread=%d,%s\n",nread,buff); 
     //printf("nwrite=%d,%s\n",nwrite,buff);
     //close(fd);
 
-    printf("move_forward\r\n");
-}
-
-int move_stop(int fd)
-{
-    
-    char buff[]="ss"; 
-    //nread=read(fd,buff,8);//读串口 
-    write(fd,buff,sizeof(buff));//读串口 
-    //printf("nread=%d,%s\n",nread,buff); 
-    //printf("nwrite=%d,%s\n",nwrite,buff);
-    //close(fd);
-
-    printf("move_forward\r\n");
-}
-
-int move_back(int fd)
-{
-    
-    char buff[]="bb"; 
-    //nread=read(fd,buff,8);//读串口 
-    write(fd,buff,sizeof(buff));//读串口 
-    //printf("nread=%d,%s\n",nread,buff); 
-    //printf("nwrite=%d,%s\n",nwrite,buff);
-    //close(fd);
-
-    printf("move_forward\r\n");
-}
-
-int move_left(int fd)
-{
-    
-    char buff[]="ll"; 
-    //nread=read(fd,buff,8);//读串口 
-    write(fd,buff,sizeof(buff));//读串口 
-    //printf("nread=%d,%s\n",nread,buff); 
-    //printf("nwrite=%d,%s\n",nwrite,buff);
-    //close(fd);
-
-    printf("move_forward\r\n");
+    //printf("move_forward\r\n");
 }
 
 
-int move_right(int fd)
-{
-    
-    char buff[]="rr"; 
-    //nread=read(fd,buff,8);//读串口 
-    write(fd,buff,sizeof(buff));//读串口 
-    //printf("nread=%d,%s\n",nread,buff); 
-    //printf("nwrite=%d,%s\n",nwrite,buff);
-    //close(fd);
 
-    printf("move_forward\r\n");
-}*/
 
 
 

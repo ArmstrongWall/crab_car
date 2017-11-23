@@ -1,8 +1,8 @@
 /*
  * Copyright © 2017 Uisee Co., Ltd.
- * 文件名： keyboard.c
- * 功能  ： 按键扫描
- * 作者  ： JohnnyWang
+ * File name： keyboard.c
+ * Function  ： 按键扫描
+ * Author  ： JohnnyWang
  * log   :   
  * =======2017.06.15.10:22(星期四)======= 创建文
 
@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <termio.h>  
-/*函数功能：扫描键盘按下的键值
+/*函数Function：扫描键盘按下的键值
  *参数说明：
   返回值 ：
             成功： 按键对应的ASCII码

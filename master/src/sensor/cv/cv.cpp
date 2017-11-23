@@ -1,9 +1,9 @@
 /*
  *
  * Copyright © 2017 Uisee Co., Ltd.
- * 文件名： cv.cpp
- * 功能  ： 基于OpenCV-3.2.0的图像处理
- * 作者  ： JohnnyWang
+ * File name： cv.cpp
+ * Function  ： 基于OpenCV-3.2.0的图像处理
+ * Author  ： JohnnyWang
  * log   :   
  =======2017.06.21.17:29(星期三)======= create file
  =======2017.06.22.11:19(星期四)======= 添加图像采集 
@@ -21,7 +21,7 @@ using namespace cv;
 using namespace std;
 
 /*
- *函数功能：打开视频流并且保存图像
+ *函数Function：打开视频流并且保存图像
  *参数说明：
                    ：
                    ：
