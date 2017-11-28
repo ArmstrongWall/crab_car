@@ -41,7 +41,6 @@ class wheel_robot
                |           |
                --  omega  --
 
-
 */
 public:
     wheel_robot() = default;
@@ -61,7 +60,7 @@ public:
         }
     };
     virtual wheel_velocity wheel_velocity_decode() {};
-    virtual int robot_move()    {};
+    virtual int robot_move() {};
     virtual ~wheel_robot() = default;
     
 public:
