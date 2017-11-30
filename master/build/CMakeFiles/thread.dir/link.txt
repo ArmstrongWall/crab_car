@@ -1,1 +1,1 @@
-/usr/bin/c++  -fPIC -std=c++11 -g  -shared -Wl,-soname,libthread.so -o libthread.so CMakeFiles/thread.dir/src/sys/thread/thread.cc.o 
+/usr/bin/c++  -fPIC -std=c++11  -g  -shared -Wl,-soname,libthread.so -o libthread.so CMakeFiles/thread.dir/src/sys/thread/thread.cc.o 

@@ -16,8 +16,9 @@ set (CMAKE_BUILD_TYPE "Debug")
 #设置全局变量
 set (EXTRA_LIBS ${EXTRA_LIBS} serial dealy thread robot keyboard cv)
 #注意，如果一个库要引用其他库的函数，需要将被引用的库放在后面
-set (CMAKE_CXX_FLAGS "-std=c++11")
+set (CMAKE_CXX_FLAGS "-std=c++11 ")
 #添加c++11标准支持
+
 
 
 #find_package (OpenCV REQUIRED)

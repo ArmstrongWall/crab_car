@@ -1,1 +1,1 @@
-/usr/bin/c++  -fPIC -std=c++11 -g  -shared -Wl,-soname,libkeyboard.so -o libkeyboard.so CMakeFiles/keyboard.dir/src/sensor/keyboard/keyboard.cc.o 
+/usr/bin/c++  -fPIC -std=c++11  -g  -shared -Wl,-soname,libkeyboard.so -o libkeyboard.so CMakeFiles/keyboard.dir/src/sensor/keyboard/keyboard.cc.o 

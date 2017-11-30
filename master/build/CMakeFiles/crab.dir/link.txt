@@ -1,1 +1,1 @@
-/usr/bin/c++   -std=c++11 -g   CMakeFiles/crab.dir/src/main.cc.o  -o crab -rdynamic libserial.so libdealy.so libthread.so librobot.so libkeyboard.so libcv.so -lpthread -Wl,-rpath,/home/wzq/crab_car/master/build 
+/usr/bin/c++   -std=c++11  -g   CMakeFiles/crab.dir/src/main.cc.o  -o crab -rdynamic libserial.so libdealy.so libthread.so librobot.so libkeyboard.so libcv.so -lpthread -Wl,-rpath,/home/wzq/crab_car/master/build 

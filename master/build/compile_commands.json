@@ -1,37 +1,37 @@
 [
 {
   "directory": "/home/wzq/crab_car/master/build",
-  "command": "/usr/bin/c++    -I/usr/include/eigen3  -std=c++11 -g   -o CMakeFiles/crab.dir/src/main.cc.o -c /home/wzq/crab_car/master/src/main.cc",
+  "command": "/usr/bin/c++    -I/usr/include/eigen3  -std=c++11  -g   -o CMakeFiles/crab.dir/src/main.cc.o -c /home/wzq/crab_car/master/src/main.cc",
   "file": "/home/wzq/crab_car/master/src/main.cc"
 },
 {
   "directory": "/home/wzq/crab_car/master/build",
-  "command": "/usr/bin/c++   -Dcv_EXPORTS -I/usr/include/eigen3  -std=c++11 -g -fPIC   -o CMakeFiles/cv.dir/src/sensor/cv/cv.cpp.o -c /home/wzq/crab_car/master/src/sensor/cv/cv.cpp",
+  "command": "/usr/bin/c++   -Dcv_EXPORTS -I/usr/include/eigen3  -std=c++11  -g -fPIC   -o CMakeFiles/cv.dir/src/sensor/cv/cv.cpp.o -c /home/wzq/crab_car/master/src/sensor/cv/cv.cpp",
   "file": "/home/wzq/crab_car/master/src/sensor/cv/cv.cpp"
 },
 {
   "directory": "/home/wzq/crab_car/master/build",
-  "command": "/usr/bin/c++   -Drobot_EXPORTS -I/usr/include/eigen3  -std=c++11 -g -fPIC   -o CMakeFiles/robot.dir/src/robot/robot.cc.o -c /home/wzq/crab_car/master/src/robot/robot.cc",
+  "command": "/usr/bin/c++   -Drobot_EXPORTS -I/usr/include/eigen3  -std=c++11  -g -fPIC   -o CMakeFiles/robot.dir/src/robot/robot.cc.o -c /home/wzq/crab_car/master/src/robot/robot.cc",
   "file": "/home/wzq/crab_car/master/src/robot/robot.cc"
 },
 {
   "directory": "/home/wzq/crab_car/master/build",
-  "command": "/usr/bin/c++   -Dthread_EXPORTS -I/usr/include/eigen3  -std=c++11 -g -fPIC   -o CMakeFiles/thread.dir/src/sys/thread/thread.cc.o -c /home/wzq/crab_car/master/src/sys/thread/thread.cc",
+  "command": "/usr/bin/c++   -Dthread_EXPORTS -I/usr/include/eigen3  -std=c++11  -g -fPIC   -o CMakeFiles/thread.dir/src/sys/thread/thread.cc.o -c /home/wzq/crab_car/master/src/sys/thread/thread.cc",
   "file": "/home/wzq/crab_car/master/src/sys/thread/thread.cc"
 },
 {
   "directory": "/home/wzq/crab_car/master/build",
-  "command": "/usr/bin/c++   -Dkeyboard_EXPORTS -I/usr/include/eigen3  -std=c++11 -g -fPIC   -o CMakeFiles/keyboard.dir/src/sensor/keyboard/keyboard.cc.o -c /home/wzq/crab_car/master/src/sensor/keyboard/keyboard.cc",
+  "command": "/usr/bin/c++   -Dkeyboard_EXPORTS -I/usr/include/eigen3  -std=c++11  -g -fPIC   -o CMakeFiles/keyboard.dir/src/sensor/keyboard/keyboard.cc.o -c /home/wzq/crab_car/master/src/sensor/keyboard/keyboard.cc",
   "file": "/home/wzq/crab_car/master/src/sensor/keyboard/keyboard.cc"
 },
 {
   "directory": "/home/wzq/crab_car/master/build",
-  "command": "/usr/bin/c++   -Ddealy_EXPORTS -I/usr/include/eigen3  -std=c++11 -g -fPIC   -o CMakeFiles/dealy.dir/src/sys/dealy/dealy.cc.o -c /home/wzq/crab_car/master/src/sys/dealy/dealy.cc",
+  "command": "/usr/bin/c++   -Ddealy_EXPORTS -I/usr/include/eigen3  -std=c++11  -g -fPIC   -o CMakeFiles/dealy.dir/src/sys/dealy/dealy.cc.o -c /home/wzq/crab_car/master/src/sys/dealy/dealy.cc",
   "file": "/home/wzq/crab_car/master/src/sys/dealy/dealy.cc"
 },
 {
   "directory": "/home/wzq/crab_car/master/build",
-  "command": "/usr/bin/c++   -Dserial_EXPORTS -I/usr/include/eigen3  -std=c++11 -g -fPIC   -o CMakeFiles/serial.dir/src/sys/serial/serial.cc.o -c /home/wzq/crab_car/master/src/sys/serial/serial.cc",
+  "command": "/usr/bin/c++   -Dserial_EXPORTS -I/usr/include/eigen3  -std=c++11  -g -fPIC   -o CMakeFiles/serial.dir/src/sys/serial/serial.cc.o -c /home/wzq/crab_car/master/src/sys/serial/serial.cc",
   "file": "/home/wzq/crab_car/master/src/sys/serial/serial.cc"
 }
 ]

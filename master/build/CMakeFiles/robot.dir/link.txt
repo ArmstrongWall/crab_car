@@ -1,1 +1,1 @@
-/usr/bin/c++  -fPIC -std=c++11 -g  -shared -Wl,-soname,librobot.so -o librobot.so CMakeFiles/robot.dir/src/robot/robot.cc.o 
+/usr/bin/c++  -fPIC -std=c++11  -g  -shared -Wl,-soname,librobot.so -o librobot.so CMakeFiles/robot.dir/src/robot/robot.cc.o 

@@ -4,6 +4,7 @@
 CMakeFiles/robot.dir/src/robot/robot.cc.o
  /home/wzq/crab_car/master/src/robot/robot.cc
  /home/wzq/crab_car/master/src/robot/robot.h
+ /home/wzq/crab_car/master/src/sensor/keyboard/keyboard.h
  /home/wzq/crab_car/master/src/sys/serial/serial.h
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core

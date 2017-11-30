@@ -3,6 +3,7 @@
 
 CMakeFiles/robot.dir/src/robot/robot.cc.o: ../src/robot/robot.cc
 CMakeFiles/robot.dir/src/robot/robot.cc.o: ../src/robot/robot.h
+CMakeFiles/robot.dir/src/robot/robot.cc.o: ../src/sensor/keyboard/keyboard.h
 CMakeFiles/robot.dir/src/robot/robot.cc.o: ../src/sys/serial/serial.h
 CMakeFiles/robot.dir/src/robot/robot.cc.o: /usr/include/eigen3/Eigen/Cholesky
 CMakeFiles/robot.dir/src/robot/robot.cc.o: /usr/include/eigen3/Eigen/Core

@@ -14,17 +14,24 @@ int serial_fd;
 int main(void)  
 {
       
-    Eigen::Vector3d  Johnny_velocity(0,400,0);
+    Eigen::Vector3d  set_velocity(0,0,0);
     
-    Eigen::Vector3d wheel_velocity;
+    double_wheel_robot Johnny(set_velocity,"UART");
     
-    three_omni_wheel_robot Johnny(Johnny_velocity,"UART");
+    Eigen::Vector2d wheel_velocity;
+    
+    Johnny.remote_control_init();
     
     wheel_velocity = Johnny.wheel_velocity_decode();
     
-    Johnny.robot_move();
-    
     std::cout << wheel_velocity << std::endl;
+    
+    while(1)
+    {
+        Johnny.remote_control();
+        mysleep(0,20*1000);
+
+    }
     
     
     
