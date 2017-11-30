@@ -10,6 +10,21 @@
  */
 #ifndef KEYBOARD_H_
 #define KEYBOARD_H_
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <cstdlib>
+
+#define TTY_PATH            "/dev/tty"
+#define STTY_US             "stty raw -echo -F "
+#define STTY_DEF            "stty -raw echo -F "
+
 /* 备注   ：
             部分ASCII码表
             97  a
@@ -41,5 +56,7 @@
 */
 
 int scanKeyboard();  
+int keyboard_init();
+int keyboard_input();
 
 #endif

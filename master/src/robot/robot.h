@@ -23,13 +23,15 @@
 #include <Eigen/Geometry>
 
 #include "../sys/serial/serial.h"
+#include "../sensor/keyboard/keyboard.h"
 
 using std::string;
 using namespace std;
 
-#define RADIUS_value 0.12d
+#define SLAM_CAR_RADIUS 0.12d
+#define CARB_CAR_RADIUS 1.00d
 
-template <typename wheel_velocity>
+template <typename wheel_velocity_type>
 class wheel_robot
 {
 /*
@@ -41,7 +43,6 @@ class wheel_robot
                |           |
                --  omega  --
 
-
 */
 public:
     wheel_robot() = default;
@@ -52,7 +53,6 @@ public:
         {
             serial_fd = serial_init(115200);
             //cout << serial_fd << endl;
-            
         }
         if(chassis_model == "CAN")
         {
@@ -60,33 +60,43 @@ public:
             return;
         }
     };
-    virtual wheel_velocity wheel_velocity_decode() {};
-    virtual int robot_move()    {};
+    virtual wheel_velocity_type wheel_velocity_decode() {};
+    virtual int robot_move() {};
     virtual ~wheel_robot() = default;
     
 public:
-    Eigen::Vector3d  robot_velocity;
-   
+    Eigen::Vector3d      robot_velocity;
+    wheel_velocity_type  dewheel_velocity;
 
 //  Chassis control   
+public:
+    void remote_control_init(){keyboard_init();};
+    virtual int remote_control() {};
+    
     
 private:
-   string chassis_control_model;
+    string chassis_control_model;
+    
 
 protected:
-  int  serial_fd   = 0; 
-  unsigned char instruction_message[8] ={0x53, 0x7f , 0xff , 0x7f , 0xff , 0x7f , 0xff , 0x45};
+    double speed_temp = 0.0;
+    int  wantgo = 0;
+    int  serial_fd   = 0; 
+    unsigned char instruction_message[8]={0x53,0x7f,0xff,0x7f,0xff,0x7f,0xff,0x45};
+  //unsigned char instruction_message[8]={0x53,0x7f,0xff,0x7f,0xff,0x7f,0xff,0x45};
+  //unsigned char instruction_message[8]={0x53,0x81,0x8f,0x81,0x8f,0x7f,0xff,0x45};
   /*
-53 81 8f 7f ff 7f ff 45 
-53 7f ff 81 8f 7f ff 45 
-53 7f ff 7f ff 81 8f 45 
-               	一帧数据的结构  八个字节
+            53 81 8f 7f ff 7f ff 45 
+            53 7f ff 81 8f 7f ff 45 
+            53 7f ff 7f ff 81 8f 45 
+            一帧数据的结构  八个字节
 
 		帧头   一号轮速度            二号轮速度        三号轮速度       帧尾
 		0x53  0xFF    0xFF     0xFF    0xFF      0xFF 0xFF        0x45
 			  高位    低位
 对应CAN消息 Data[0] Data[1]    Data[2] Data[3]   Data[4] Data[5]
    */
+  
 
 };
 
@@ -105,22 +115,47 @@ class three_omni_wheel_robot : public wheel_robot<Eigen::Vector3d>
 
 public:
     three_omni_wheel_robot() = default;
-    explicit three_omni_wheel_robot( Eigen::Vector3d velocity ,const string chassis_model) : wheel_robot(velocity,chassis_model)
+    explicit three_omni_wheel_robot( Eigen::Vector3d velocity ,const string chassis_model) 
+    : wheel_robot(velocity,chassis_model)
     {
-       solve_convert <<   -0.5d , -0.866d , RADIUS_value ,
-                          -0.5d ,  0.866d , RADIUS_value ,
-                           1.0d ,  0.0d   , RADIUS_value ;
+       solve_convert <<   -0.5d , -0.866d , SLAM_CAR_RADIUS ,
+                          -0.5d ,  0.866d , SLAM_CAR_RADIUS ,
+                           1.0d ,  0.0d   , SLAM_CAR_RADIUS ;
     };
     virtual Eigen::Vector3d wheel_velocity_decode() override;//can't be const
-    virtual int robot_move()   override ;
     virtual ~three_omni_wheel_robot() = default;
 
 private:
     Eigen::Matrix3d  solve_convert;
-    Eigen::Vector3d  dewheel_velocity;
-   
+  
 };
 
+class double_wheel_robot : public wheel_robot<Eigen::Vector2d>
+{
+/* 
+                                                       Y
+    velocity   --   V_1   --                          /|\  
+               |           |                           |
+               |           |                           |        
+               |           |                           |_________\ X
+               --   V_2   --      V1-------V2         o          / 
 
+*/
+public:
+    double_wheel_robot() = default;
+    explicit double_wheel_robot( Eigen::Vector3d velocity ,const string chassis_model) 
+    : wheel_robot(velocity,chassis_model)
+    {
+       solve_convert <<   0.5d ,  0.0d , -CARB_CAR_RADIUS ,
+                          0.5d ,  0.0d ,  CARB_CAR_RADIUS ;
+    };
+    virtual Eigen::Vector2d wheel_velocity_decode() override; //can't be const
+    virtual int robot_move()   override ;
+    virtual int remote_control() override; //can't be const
+    virtual ~double_wheel_robot() = default;
 
+private:
+    Eigen::Matrix<double,2,3>  solve_convert;
+
+};
 #endif

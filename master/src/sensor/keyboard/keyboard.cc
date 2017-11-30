@@ -7,9 +7,12 @@
  * =======2017.06.15.10:22(星期四)======= 创建文
 
 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <termio.h>  
+
+#include "keyboard.h"
 /*函数Function：扫描键盘按下的键值
  *参数说明：
   返回值 ：
@@ -38,3 +41,31 @@ int scanKeyboard()
     
     return in;  
 }  
+int keyboard_init()
+{
+    system(STTY_US TTY_PATH);
+}
+
+
+int keyboard_input()
+{
+    fd_set rfds;
+    struct timeval tv;
+    int ch = 0;
+
+    FD_ZERO(&rfds);
+    FD_SET(0, &rfds);
+    tv.tv_sec = 0;
+    tv.tv_usec = 10; //设置等待超时时间
+
+    //检测键盘是否有输入
+    if (select(1, &rfds, NULL, NULL, &tv) > 0)
+    {
+        ch = getchar(); 
+    }
+
+    return ch;
+}
+
+
+
